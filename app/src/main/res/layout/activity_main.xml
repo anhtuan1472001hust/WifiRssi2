@@ -80,7 +80,6 @@
             android:layout_height="match_parent"
             android:text="Phòng:"
             android:textSize="15sp"
-            android:inputType="number"
             android:layout_marginLeft="15dp"
             android:layout_marginStart="15dp"
             app:layout_constraintTop_toTopOf="parent"
@@ -99,6 +98,102 @@
             android:layout_marginLeft="12dp"
             app:layout_constraintStart_toEndOf="@+id/room_label"
             app:layout_constraintTop_toTopOf="@id/room_label"
+            app:layout_constraintVertical_bias="0.9"
+            android:layout_marginEnd="150dp"
+            android:layout_marginStart="12dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/rssi1Label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="rssi1:"
+            android:textSize="15sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/rssi1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/rssi1Label"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="150dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="12dp"
+            app:layout_constraintStart_toEndOf="@+id/rssi1Label"
+            app:layout_constraintTop_toTopOf="@id/rssi1Label"
+            app:layout_constraintVertical_bias="0.9"
+            android:layout_marginEnd="150dp"
+            android:layout_marginStart="12dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/rssi2_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="rssi2:"
+            android:textSize="15sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/rssi2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/rssi2_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="150dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="12dp"
+            app:layout_constraintStart_toEndOf="@+id/rssi2_label"
+            app:layout_constraintTop_toTopOf="@id/rssi2_label"
+            app:layout_constraintVertical_bias="0.9"
+            android:layout_marginEnd="150dp"
+            android:layout_marginStart="12dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/rssi3_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="rssi3:"
+            android:textSize="15sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/rssi3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/rssi3_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="150dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="12dp"
+            app:layout_constraintStart_toEndOf="@+id/rssi3_label"
+            app:layout_constraintTop_toTopOf="@id/rssi3_label"
             app:layout_constraintVertical_bias="0.9"
             android:layout_marginEnd="150dp"
             android:layout_marginStart="12dp" />

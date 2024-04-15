@@ -70,9 +70,13 @@ class MainActivity : AppCompatActivity() {
             }
             val latitude = binding.edtLatitude.text.toString()
             val longitude = binding.edtLongitude.text.toString()
+            val listRssi = arrayListOf<WifiModel>()
+            listRssi.add(WifiModel(wifiRssi = binding.rssi1.text.toString().toInt(), wifiName = "Wifi Free 5G"))
+            listRssi.add(WifiModel(wifiRssi = binding.rssi2.text.toString().toInt(), wifiName = "linksys"))
+            listRssi.add(WifiModel(wifiRssi = binding.rssi3.text.toString().toInt(), wifiName = "wifi free"))
             uploadLocationData(
                 WifiScan(
-                    mainAdapter.getItemSelected(),
+                    listRssi,
                     latitude = latitude
                 ),
                 binding.edtRoom.text.toString()
