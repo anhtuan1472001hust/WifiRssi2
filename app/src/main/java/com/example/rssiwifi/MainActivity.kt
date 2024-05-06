@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var locationsRef: DatabaseReference
     private lateinit var demoRef: DatabaseReference
     private lateinit  var edtRoom: String
+    private lateinit var edtLabel: String
     private var numberClick = 0
 
     companion object {
@@ -49,7 +50,8 @@ class MainActivity : AppCompatActivity() {
         database = FirebaseDatabase.getInstance()
         locationsRef = database.getReference("locations")
         demoRef = database.getReference("demo")
-        edtRoom = binding.edtRoom.toString()
+        edtRoom = binding.edtRoom.text.toString()
+        edtLabel = binding.edtLatitude.text.toString()
         setButtonClick()
     }
 
@@ -61,10 +63,11 @@ class MainActivity : AppCompatActivity() {
             numberClick++
             if (numberClick > 1) {
                 val newRoom = binding.edtRoom.text.toString()
+                val newLabel = binding.edtLatitude.text.toString()
                 val newData = "${binding.edtLatitude.text}:${binding.edtLongitude.text}"
                 Log.e("Bello","newRoom: $newRoom")
                 Log.e("Bello","oldRoom: $edtRoom")
-                if (newRoom != edtRoom) {
+                if (newRoom != edtRoom || newLabel != edtLabel) {
                     numberClick = 1
                 }
             }
@@ -160,6 +163,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun uploadLocationData(wifiScan: WifiScan, room: String) {
         edtRoom = room
+        edtLabel = binding.edtLatitude.text.toString()
         for (wifi in wifiScan.listWifi) {
             wifi.wifiName?.let {
                 demoRef.child(room).child(wifiScan.latitude.toString()).child(it).child(numberClick.toString()).setValue(wifi.wifiRssi)
